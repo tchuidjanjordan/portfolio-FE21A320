@@ -1,0 +1,99 @@
+.aboutDivStart{
+margin-top: 150px;
+
+}
+.aboutDivStart center{
+    font-weight: bolder;
+    color: rgb(178, 188, 198);
+    margin-bottom: 40px;
+  
+}
+.one{
+    height: 160px;
+    background-color: rgba(47, 47, 146,0.5);
+    width: 220px;
+    margin-left:30px;
+    margin-bottom:30px;
+}
+
+.one:hover{
+    background-color:#1f1f38;
+    border: rgba(47, 47, 146,0.5) 1.5px solid ;
+}
+
+
+.one h3{
+  padding-top:10px ;
+  padding-left:20px ;
+  font-weight: bold;
+  color: white;
+}
+
+.one h4 , .one h5{
+    font-size: small;
+    font-weight: bolder;
+    color:rgba(179, 174, 174,0.5);
+    padding-left: 35px;
+}
+
+.mainDivAbout,.up{
+    width: 100%;
+    display: flex;
+}
+.up{
+    display: flex;
+}
+.rightSide{
+    margin-left: 50px;
+    width: 40%;
+}
+.leftSide{
+    height: 600px;
+    width: 45%;
+}
+.plainText , h4{
+   text-align: justify;
+   color: rgba(197, 202, 206,0.7);
+   margin:15px;
+}
+.leftSide .leftMainDiv{
+    height: 376px;
+    background-color: rgb(75, 137, 158);
+    width: 360px;
+    margin-left: 185px;
+    border-radius: 50px;
+
+    /* background-position: right top, left bottom; */
+}
+.leftSide .leftMainDiv .imageDiv{
+    height: 80%;
+    width: 100%;
+    /* background-color: rgb(180, 116, 116); */
+    border-radius: 40px 40px 0 0;
+    transition-property: transform;
+    transition-duration: 0.3s;
+   transform : rotate(9deg);
+   overflow: hidden;
+}
+
+.leftSide .leftMainDiv:hover  .imageDiv{
+    transform : rotate(0deg)
+}
+
+.aboutDivStart #btnTalk{
+    margin-left: 130px;
+    margin-bottom: 120px;
+    color:rgba(0, 0, 0,0.5);
+    width: 110px;
+    height: 50px;
+    background-color: rgb(77,181,255);
+    border-radius: 9px;
+    font-size: large;
+    transition-property: background-color;
+    transition-duration:0.5s ;
+
+}
+
+.aboutDivStart #btnTalk:hover{
+    background-color: white;
+}

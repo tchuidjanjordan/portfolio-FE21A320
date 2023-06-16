@@ -1,0 +1,52 @@
+.mainDivProject{
+    background-color:rgb(44,44,108);
+    width: 320px;
+    height: 380px;
+    border-radius: 40px;
+    margin-right: 40px;
+    margin-top: 40px;
+}
+
+.mainDivProject .divImage{
+    width: 90%;
+    height: 45%;
+    margin-left: 13px;
+    border-radius: 30px;
+    overflow: hidden;
+}
+.mainDivProject p{
+    font-weight: bolder;
+    font-size: large;
+    color: goldenrod;
+    text-transform: uppercase;
+}
+
+.mainDivProject  .btnDiv{
+    margin-left: 30px;
+  
+}
+.mainDivProject  .btnDiv #btnGit{
+ color:rgb(70,151,223);
+    border:hsl(208,71%,57%) 1.5px solid ;
+    width: 92px;
+    height: 55px;
+    background-color: rgb(44,44,108);
+    border-radius: 9px;
+    font-size: large;
+    margin-right: 20px;
+}
+.mainDivProject  .btnDiv #btnDemo{
+    color:rgba(0, 0, 0,0.5);
+    border:lightblue 2px solid ;
+    width: 120px;
+    height: 55px;
+    background-color: rgb(77,181,255);
+    border-radius: 9px;
+    font-size: large;
+    margin-right: 30px;
+}
+.mainDivProject  .btnDiv #btnDemo:hover, .mainDivProject  .btnDiv #btnGit:hover{
+    background-color: white;
+    border:0px;
+    color: rgba(0, 0, 0,0.6)
+}
