@@ -10,32 +10,29 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/pagination';
 
-function Testimonials() {
-  const [data, setData] = useState([]);
-  const [loading, setLoading] = useState(true);
+const  Testimonials=() =>{
  
-
+  const [data, setData] = useState([{}]);
   useEffect(() => {
-    fetchTestimonials();
-  }, []);
-
-  const fetchTestimonials = async () => {
-    try {
-      const response = await axios.get('http://localhost:5000/api/testimonials');
-      setData(response.data);
-      setLoading(false);
-    } catch (error) {
-      console.error(error);
-      setLoading(false);
-    }
-  };
-
+    axios
+      .get('https://jolly-tights-hen.cyclic.app/api/testimonials')
+      .then(response => {
+        const formattedData =response.data.data.map(item =>({
+          id:item._id,
+          avatar:item.avatar,
+          name:item.name,
+          review:item.review,
+          
+        }));
+        setData(formattedData)
+      }).catch(error=>{console.log("error fetching testimonials data",error);})
+    },[])
+      
   
   return (
-    <section id="testimonials">
-      
-
-     
+      <section id='portfolio'>
+      <h5>My Recent Review</h5>
+      <h2>Testimonials</h2>
       <Swiper
         className="container testimonials__container"
         modules={[Navigation, Pagination, Scrollbar, A11y]}
@@ -45,13 +42,11 @@ function Testimonials() {
         pagination={{ clickable: true }}
         scrollbar={{ draggable: true }}
       >
-        {loading ? (
-          <p>Loading...</p>
-        ) : (
+        { (
           data.map(({ avatar, name, review }, index) => (
             <SwiperSlide className="testimonial" key={index}>
               <div className="client__avatar">
-                <img src={`http://localhost:5000/${avatar}`} alt="Avatar" />
+                <img src={avatar} alt="Avatar" />
               </div>
               <h5 className="client__name">{name}</h5>
               <small className="client__review">{review}</small>
