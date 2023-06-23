@@ -15,7 +15,7 @@ const  Testimonials=() =>{
   const [data, setData] = useState([{}]);
   useEffect(() => {
     axios
-      .get('https://jolly-tights-hen.cyclic.app/api/testimonials')
+      .get('https://jolly-tights-hen.cyclic.app/api/testimonial')
       .then(response => {
         const formattedData =response.data.data.map(item =>({
           id:item._id,
